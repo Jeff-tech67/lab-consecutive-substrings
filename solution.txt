@@ -1,2 +1,10 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+
+Create an empty array called result
+
+Loop through the string using index i from 0 to length - 1
+    Create an empty string called substring
+    Loop through the string using index j from i to length - 1
+        Add character at index j to substring
+        Push substring into result array
+
+Return result
