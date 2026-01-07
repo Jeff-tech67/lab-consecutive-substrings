@@ -1,18 +1,21 @@
-function consecutiveSubstrings(string) {
-  // type your code here
-}
+/**
+ * Returns all consecutive substrings of a given string
+ * @param {string} str
+ * @returns {string[]}
+ */
+function consecutiveSubstrings(str) {
+  const result = [];
 
-if (require.main === module) {
-  // add your own tests in here
-  console.log("Expecting: ['a', 'ab', 'abc', 'b', 'bc', 'c']");
-  console.log("=>", consecutiveSubstrings('abc'));
+  for (let i = 0; i < str.length; i++) {
+    let substring = '';
 
-  console.log("");
+    for (let j = i; j < str.length; j++) {
+      substring += str[j];
+      result.push(substring);
+    }
+  }
 
-  console.log("Expecting: ['a']");
-  console.log("=>", consecutiveSubstrings('a'));
+  return result;
 }
 
 module.exports = consecutiveSubstrings;
-
-
